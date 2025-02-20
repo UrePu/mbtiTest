@@ -4,6 +4,14 @@ const API_URL = "https://www.nbcamp-react-auth.link";
 
 export const register = async (userData) => {
   const response = await axios.post(`${API_URL}/register`, userData);
+
+  // JSON
+  // {
+  //     "id": "유저 아이디",
+  //     "password": "유저 비밀번호",
+  //     "nickname": "유저 닉네임"
+  // }
+
   console.log(response.data);
   return response.data;
 };
@@ -21,6 +29,11 @@ export const getUserProfile = async (token) => {
       Authorization: `Bearer ${token}`,
     },
   });
+  //   JSON
+  // {
+  //   "id":"유저 아이디",
+  //   "password": "유저 비밀번호"
+  // }
   console.log(response.data);
   return response.data;
 };
