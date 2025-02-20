@@ -1,3 +1,9 @@
 {
-  "testResults": []
+  "testResults": [
+    {
+      "id": 1,
+      "mbti": "INTJ",
+      "date": "2022-01-01"
+    }
+  ]
 }
