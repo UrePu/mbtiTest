@@ -1,20 +1,17 @@
-import axios from "axios";
-import { login } from "../api/auth";
+import { Outlet } from "react-router-dom";
+import Header from "../components/layout/Header";
+import { useLocation } from "react-router-dom";
+import PersonalityTest from "../components/PersonalityTest";
 
 const Home = () => {
-  axios.get("http://localhost:5000/testResults").then((response) => {
-    console.log(response.data);
-  });
+  const location = useLocation().pathname === "/";
 
-  const test = async () => {
-    const answer = await login({
-      id: "test3142",
-      password: "test",
-    });
-    console.log(answer);
-  };
-  test();
-  return <div>Home</div>;
+  return (
+    <>
+      <Header />
+      {location ? <PersonalityTest /> : <Outlet />}
+    </>
+  );
 };
 
 export default Home;

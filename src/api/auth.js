@@ -18,7 +18,11 @@ export const register = async (userData) => {
 
 export const login = async (userData) => {
   const response = await axios.post(`${API_URL}/login?expiresIn=10m`, userData);
-  console.log(response.data);
+  //   JSON
+  // {
+  //   "id":"유저 아이디",
+  //   "password": "유저 비밀번호"
+  // }
   return response.data;
 };
 
@@ -29,10 +33,12 @@ export const getUserProfile = async (token) => {
       Authorization: `Bearer ${token}`,
     },
   });
-  //   JSON
+  //   JSON 응답
   // {
-  //   "id":"유저 아이디",
-  //   "password": "유저 비밀번호"
+  //   "id": "사용자 아이디",
+  //   "nickname": "사용자 닉네임",
+  //   "avatar": null,
+  //   "success": true
   // }
   console.log(response.data);
   return response.data;

@@ -1,7 +1,12 @@
-import React from "react";
-
+import { getUserProfile } from "../api/auth";
+const token = localStorage.getItem("token");
 const Profile = () => {
-  return <div>Profile</div>;
+  const a = async () => {
+    const userProfile = await getUserProfile(token);
+    console.log(userProfile);
+  };
+  a();
+  return <div>내정보</div>;
 };
 
 export default Profile;

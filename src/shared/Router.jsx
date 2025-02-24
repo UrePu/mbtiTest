@@ -4,20 +4,26 @@ import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import Profile from "../pages/Profile";
 import Results from "../pages/results";
+import { AuthProvider } from "../context/AuthContext";
+import Question from "../pages/Question";
 
 const Router = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* Add routes here */}
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/results" element={<Results />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          {/* Add routes here */}
+          <Route path="/" element={<Home />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/results" element={<Results />} />
+            <Route path="/question" element={<Question />} />
+          </Route>
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 };
 

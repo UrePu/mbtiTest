@@ -1,9 +1,14 @@
 {
   "testResults": [
     {
-      "id": 1,
-      "mbti": "INTJ",
-      "date": "2022-01-01"
+      "id": "test0919",
+      "miti": "ESFJ",
+      "date": "2025-02-24"
+    },
+    {
+      "id": "test0919",
+      "miti": "ESFJ",
+      "date": "2025-02-24"
     }
   ]
 }
