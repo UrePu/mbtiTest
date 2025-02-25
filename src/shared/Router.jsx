@@ -3,7 +3,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import Profile from "../pages/Profile";
-import Results from "../pages/results";
+import Results from "../pages/Results";
 import { AuthProvider } from "../context/AuthContext";
 import Question from "../pages/Question";
 import Result from "../pages/Result";
