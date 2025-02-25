@@ -19,10 +19,10 @@ const Question = () => {
       type: q.type,
       answer: formData.get(String(q.id)),
     }));
-    // if (answers.some((a) => a.answer === null)) {
-    //   alert("모든 문항에 답해주세요.");
-    //   return;
-    // }
+    if (answers.some((a) => a.answer === null)) {
+      alert("모든 문항에 답해주세요.");
+      return;
+    }
     const mbti = calculateMBTI(answers);
     const userData = await getUserProfile(token);
     setMyType(mbti);

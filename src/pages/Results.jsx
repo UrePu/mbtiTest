@@ -19,7 +19,7 @@ const Results = () => {
           검사 결과가 아직 없습니다!
         </div>
       ) : (
-        page.map((result) => <ResultCard key={result.id} page={result} />)
+        page.map((result, idx) => <ResultCard key={idx} page={result} />)
       )}
     </div>
   );

@@ -1,3 +1,22 @@
 {
-  "testResults": []
+  "testResults": [
+    {
+      "id": "test0919",
+      "mbti": "ESFJ",
+      "date": "2025-02-25",
+      "nickname": "테스트박"
+    },
+    {
+      "id": "test0919",
+      "mbti": "ISTJ",
+      "date": "2025-02-25",
+      "nickname": "테스트박"
+    },
+    {
+      "id": "test0101",
+      "mbti": "ENFJ",
+      "date": "2025-02-25",
+      "nickname": "테프트"
+    }
+  ]
 }
