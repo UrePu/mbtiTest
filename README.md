@@ -18,7 +18,7 @@
 
 디렉토리 구조
 
-.
+`.
 ├── src
 │   ├── api
 │   │   ├── auth.js
@@ -61,7 +61,7 @@
 ├── README.md
 ├── package.json
 ├── package-lock.json
-├── yarn.lock
+├── yarn.lock`
 
 
 설치 및 실행 방법
