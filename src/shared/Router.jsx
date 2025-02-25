@@ -6,6 +6,7 @@ import Profile from "../pages/Profile";
 import Results from "../pages/results";
 import { AuthProvider } from "../context/AuthContext";
 import Question from "../pages/Question";
+import Result from "../pages/Result";
 
 const Router = () => {
   return (
@@ -18,6 +19,7 @@ const Router = () => {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/results" element={<Results />} />
+            <Route path="/result" element={<Result />} />
             <Route path="/question" element={<Question />} />
           </Route>
           <Route path="*" element={<Home />} />

@@ -1,7 +1,11 @@
+import ErrorBoundary from "./components/ErrorBoundary";
 import Router from "./shared/Router";
 
-const App = () => {
-  return <Router />;
-};
-
+function App() {
+  return (
+    <ErrorBoundary>
+      <Router />
+    </ErrorBoundary>
+  );
+}
 export default App;

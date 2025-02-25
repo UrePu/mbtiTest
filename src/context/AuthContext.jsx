@@ -12,8 +12,8 @@ export const AuthProvider = ({ children }) => {
       return;
     }
     if (answer) {
-      setIsAuthenticated(true);
       localStorage.setItem("token", answer);
+      setIsAuthenticated(true);
     }
   };
 

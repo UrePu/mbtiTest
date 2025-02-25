@@ -12,6 +12,9 @@ export const createTestResult = async (resultData) => {
   return response.data;
 };
 
-export const deleteTestResult = async (id) => {};
+export const deleteTestResult = async (id) => {
+  const response = await axios.delete(`${API_URL}/${id}`);
+  return response.data;
+};
 
 export const updateTestResultVisibility = async (id, visibility) => {};

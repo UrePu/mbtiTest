@@ -1,6 +1,18 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 function PersonalityTest() {
+  const { isAuthenticated } = useAuth();
+  const navigator = useNavigate();
+
+  const clickHandler = () => {
+    if (isAuthenticated) {
+      navigator("/question");
+    } else {
+      alert("로그인이 필요한 페이지 입니다.");
+      navigator("/login");
+    }
+  };
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
       {/* 헤더 영역 */}
@@ -42,12 +54,12 @@ function PersonalityTest() {
 
       {/* 버튼 영역 */}
       <div className="text-center mt-10">
-        <Link
-          to="/question"
+        <button
+          onClick={clickHandler}
           className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 transition-colors"
         >
           내 성격 알아보러 가기
-        </Link>
+        </button>
       </div>
     </div>
   );

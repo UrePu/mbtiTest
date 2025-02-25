@@ -1,5 +1,5 @@
 function QuestionCard({ id, question, options, type }) {
-  // type이 "J/P"와 같이 주어졌다면, '/' 기준으로 분리하여 각 옵션에 매핑
+  // type이 "J/P"와 같이 주어졌으니, '/' 기준으로 분리하여 각 옵션에 매핑
   const typeValues = type.split("/");
 
   return (

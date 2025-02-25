@@ -12,7 +12,7 @@ export const register = async (userData) => {
   //     "nickname": "유저 닉네임"
   // }
 
-  console.log(response.data);
+  // console.log(response.data);
   return response.data;
 };
 
@@ -33,6 +33,9 @@ export const getUserProfile = async (token) => {
       Authorization: `Bearer ${token}`,
     },
   });
+  if (response.status === 401) {
+    return null;
+  }
   //   JSON 응답
   // {
   //   "id": "사용자 아이디",
@@ -40,7 +43,6 @@ export const getUserProfile = async (token) => {
   //   "avatar": null,
   //   "success": true
   // }
-  console.log(response.data);
   return response.data;
 };
 
@@ -52,6 +54,5 @@ export const updateProfile = async (formData, token) => {
       Authorization: `Bearer ${token}`,
     },
   });
-  console.log(response.data);
   return response.data;
 };

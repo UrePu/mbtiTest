@@ -4,11 +4,13 @@ import { createTestResult } from "../api/testResults";
 import QuestionCard from "../components/QuestionCard";
 import { questions } from "../data/questions";
 import { calculateMBTI } from "../utils/mbtiCalculator";
+import { useMyTypeStore } from "../store/myTypeStroe";
 
 const token = localStorage.getItem("token");
 const Question = () => {
   const navigator = useNavigate();
   const data = questions;
+  const { setMyType } = useMyTypeStore();
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -17,22 +19,25 @@ const Question = () => {
       type: q.type,
       answer: formData.get(String(q.id)),
     }));
-    if (answers.some((a) => a.answer === null)) {
-      alert("모든 문항에 답해주세요.");
-      return;
-    }
-    const mbtiResult = calculateMBTI(answers);
+    // if (answers.some((a) => a.answer === null)) {
+    //   alert("모든 문항에 답해주세요.");
+    //   return;
+    // }
+    const mbti = calculateMBTI(answers);
     const userData = await getUserProfile(token);
-    console.log(userData);
+    setMyType(mbti);
+    console.log("Updated store value:", mbti);
+
     const dateNow = new Date().toISOString().split("T")[0];
     const insertData = {
       id: userData.id,
-      miti: mbtiResult,
+      mbti: mbti,
       date: dateNow,
+      nickname: userData.nickname,
     };
 
     createTestResult(insertData);
-    navigator("/results");
+    navigator("/result");
   };
 
   return (
