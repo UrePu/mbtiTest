@@ -4,6 +4,8 @@
 
 이 프로젝트는 퍼스널리티 테스트 웹 애플리케이션입니다. 사용자는 간단한 테스트를 통해 자신의 성향을 파악할 수 있습니다.
 
+[<배포 링크>](https://mbti-test-pi.vercel.app/)
+
 기술 스택
 
 프론트엔드: React, React Router, Context API, Tailwind CSS
@@ -18,19 +20,19 @@
 
 .
 ├── src
-│ ├── api
-│ ├── components
-│ │ ├── layout
-│ ├── context
-│ ├── data
-│ ├── pages
-│ ├── shared
-│ ├── store
-│ ├── utils
-│ ├── App.css
-│ ├── App.jsx
-│ ├── index.css
-│ ├── main.jsx
+│   ├── api
+│   ├── components
+│   │   ├── layout
+│   ├── context
+│   ├── data
+│   ├── pages
+│   ├── shared
+│   ├── store
+│   ├── utils
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   ├── main.jsx
 ├── .gitignore
 ├── README.md
 ├── db.json
@@ -48,7 +50,7 @@
 
 1. 프로젝트 클론
 
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/UrePu/mbtiTest)
 cd <project-folder>
 
 2. 패키지 설치
@@ -72,20 +74,6 @@ yarn server
 테스트 결과 저장 및 조회
 
 사용자 프로필 페이지
-
-환경 변수 설정 (.env)
-
-.env 파일을 생성하여 필요한 환경 변수를 설정합니다.
-
-예제:
-
-VITE_API_URL=http://localhost:5000
-
-배포
-
-Vite를 사용하여 빌드한 후 배포할 수 있습니다.
-
-yarn build
 
 라이선스
 
