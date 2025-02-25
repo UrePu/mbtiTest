@@ -13,10 +13,14 @@ const Results = () => {
     fetchResults();
   }, []);
   return (
-    <div className="flex flex-col items-center">
-      {page.map((result) => (
-        <ResultCard key={result.id} page={result} />
-      ))}
+    <div className="flex justify-center items-center flex-col">
+      {page.length === 0 ? (
+        <div className="text-gray-500 text-lg mt-10">
+          검사 결과가 아직 없습니다!
+        </div>
+      ) : (
+        page.map((result) => <ResultCard key={result.id} page={result} />)
+      )}
     </div>
   );
 };
