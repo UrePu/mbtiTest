@@ -8,61 +8,13 @@
 
 기술 스택
 
-프론트엔드: React, React Router, Context API, Tailwind CSS
+프론트엔드: React, React Router, Context API, Tailwind CSS, Zustand
 
 백엔드: JSON Server
 
 빌드 도구: Vite
 
 패키지 관리자: Yarn
-
-디렉토리 구조
-
-.
-├── src
-│   ├── api
-│   │   ├── auth.js
-│   │   ├── testResults.js
-│   ├── components
-│   │   ├── layout
-│   ├── context
-│   │   ├── AuthContext.jsx
-│   ├── data
-│   │   ├── questions.js
-│   ├── pages
-│   │   ├── Home.jsx
-│   │   ├── Login.jsx
-│   │   ├── Profile.jsx
-│   │   ├── Question.jsx
-│   │   ├── Result.jsx
-│   │   ├── Results.jsx
-│   │   ├── SignUp.jsx
-│   ├── shared
-│   │   ├── Router.jsx
-│   ├── store
-│   │   ├── myTypeStore.js
-│   ├── utils
-│   ├── styles
-│   │   ├── App.css
-│   │   ├── index.css
-│   ├── App.jsx
-│   ├── main.jsx
-├── public
-│   ├── index.html
-├── config
-│   ├── tailwind.config.js
-│   ├── vite.config.js
-│   ├── eslint.config.js
-│   ├── postcss.config.js
-├── server
-│   ├── server.js
-│   ├── db.json
-├── .gitignore
-├── README.md
-├── package.json
-├── package-lock.json
-├── yarn.lock
-
 
 설치 및 실행 방법
 
