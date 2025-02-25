@@ -22,7 +22,7 @@ const Login = () => {
       password,
     };
     const response = await login(data);
-
+    console.log(response);
     if (response) {
       loginAuth(response.accessToken);
       alert("로그인 성공");

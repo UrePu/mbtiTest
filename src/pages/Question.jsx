@@ -27,13 +27,15 @@ const Question = () => {
     const userData = await getUserProfile(token);
     setMyType(mbti);
     console.log("Updated store value:", mbti);
-
+    const uuid = userData.id + new Date().getTime();
     const dateNow = new Date().toISOString().split("T")[0];
     const insertData = {
-      id: userData.id,
+      id: uuid,
+      userid: userData.id,
       mbti: mbti,
       date: dateNow,
       nickname: userData.nickname,
+      visibility: true,
     };
 
     createTestResult(insertData);

@@ -7,10 +7,6 @@ export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(!!token);
 
   const loginAuth = async (answer) => {
-    if (token) {
-      setIsAuthenticated(true);
-      return;
-    }
     if (answer) {
       localStorage.setItem("token", answer);
       setIsAuthenticated(true);
