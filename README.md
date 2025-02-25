@@ -21,13 +21,26 @@
 .
 ├── src
 │   ├── api
+│   │   ├── auth.js
+│   │   ├── testResults.js
 │   ├── components
 │   │   ├── layout
 │   ├── context
+│   │   ├── AuthContext.jsx
 │   ├── data
+│   │   ├── questions.js
 │   ├── pages
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Profile.jsx
+│   │   ├── Question.jsx
+│   │   ├── Result.jsx
+│   │   ├── Results.jsx
+│   │   ├── SignUp.jsx
 │   ├── shared
+│   │   ├── Router.jsx
 │   ├── store
+│   │   ├── myTypeStore.js
 │   ├── utils
 │   ├── App.css
 │   ├── App.jsx
