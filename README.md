@@ -42,22 +42,27 @@
 │   ├── store
 │   │   ├── myTypeStore.js
 │   ├── utils
-│   ├── App.css
+│   ├── styles
+│   │   ├── App.css
+│   │   ├── index.css
 │   ├── App.jsx
-│   ├── index.css
 │   ├── main.jsx
+├── public
+│   ├── index.html
+├── config
+│   ├── tailwind.config.js
+│   ├── vite.config.js
+│   ├── eslint.config.js
+│   ├── postcss.config.js
+├── server
+│   ├── server.js
+│   ├── db.json
 ├── .gitignore
 ├── README.md
-├── db.json
-├── eslint.config.js
-├── index.html
-├── package-lock.json
 ├── package.json
-├── postcss.config.js
-├── server.js
-├── tailwind.config.js
-├── vite.config.js
+├── package-lock.json
 ├── yarn.lock
+
 
 설치 및 실행 방법
 
